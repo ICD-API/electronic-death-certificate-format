@@ -1,0 +1,263 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/DeathCertificate"
+    },
+    "definitions": {
+        "DeathCertificate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "CertificateKey": {
+                    "type": "string"
+                },
+                "Issuer": {
+                    "type": "string"
+                },
+                "Comments": {
+                    "type": "string"
+                },
+                "FreeText": {
+                    "type": "string"
+                },
+                "ICDVersion": {
+                    "type": "string"
+                },
+                "ICDMinorVersion": {
+                    "type": "string"
+                },
+                "UCStated": {
+                    "$ref": "#/definitions/Part"
+                },
+                "UCComputed": {
+                    "$ref": "#/definitions/UCComputed"
+                },
+                "AdministrativeData": {
+                    "$ref": "#/definitions/AdministrativeData"
+                },
+                "Part1": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Part"
+                    }
+                },
+                "Part2": {
+                    "$ref": "#/definitions/Part"
+                },
+                "Surgery": {
+                    "$ref": "#/definitions/Surgery"
+                },
+                "Autopsy": {
+                    "$ref": "#/definitions/Autopsy"
+                },
+                "MannerOfDeath": {
+                    "$ref": "#/definitions/MannerOfDeath"
+                },
+                "FetalOrInfantDeath": {
+                    "$ref": "#/definitions/FetalOrInfantDeath"
+                },
+                "MaternalDeath": {
+                    "$ref": "#/definitions/MaternalDeath"
+                }
+            },
+            "required": [
+                "AdministrativeData",
+                "CertificateKey",
+                "ICDVersion",
+                "ICDMinorVersion",
+                "Part1"
+            ],
+            "title": "Certificate"
+        },
+        "AdministrativeData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "DateBirth": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "DateDeath": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "Sex": {
+                    "type": "integer"
+                },
+                "EstimatedAge": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+            ],
+            "title": "AdministrativeData"
+        },
+        "Autopsy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "WasRequested": {
+                    "type": "integer"
+                },
+                "Findings": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+            ],
+            "title": "Autopsy"
+        },
+        "FetalOrInfantDeath": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "MultiplePregnancy": {
+                    "type": "integer"
+                },
+                "Stillborn": {
+                    "type": "integer"
+                },
+                "DeathWithin24h": {
+                    "type": "integer"
+                },
+                "BirthHeight": {
+                    "type": "integer"
+                },
+                "PregnancyWeeks": {
+                    "type": "integer"
+                },
+                "AgeMother": {
+                    "type": "integer"
+                },
+                "PerinatalDescription": {
+                    "type": "string"
+                }
+            },
+            "required": [
+            ],
+            "title": "FetalOrInfantDeath"
+        },
+        "MannerOfDeath": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "MannerOfDeath": {
+                    "type": "integer"
+                },
+                "DateOfExternalCauseOrPoisoning": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "DescriptionExternalCause": {
+                    "type": "string"
+                },
+                "PlaceOfOccuranceExternalCause": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+            ],
+            "title": "MannerOfDeath"
+        },
+        "MaternalDeath": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "WasPregnant": {
+                    "type": "integer"
+                },
+                "TimeFromPregnancy": {
+                    "type": "integer"
+                },
+                "PregnancyContribute": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+            ],
+            "title": "MaternalDeath"
+        },
+        "UCComputed": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "RuleEngine": {
+                    "type": "string"
+                },
+                "Coding": {
+                    "type": "string"
+                },
+                "Reject": {
+                    "type": "boolean"
+                },
+                "Validate": {
+                    "type": "boolean"
+                },
+                "RuleLogger": {
+                  "type": "string"
+                },
+                "FileLogger": {
+                    "type": "string"
+                },
+                "NewCodes": {
+                    "$ref": "#/definitions/Part"
+                    },
+                "UC": {
+                    "$ref": "#/definitions/Part"
+                }
+            },
+            "required": [
+                "Coding",
+                "Reject",
+                "RuleEngine",
+                "RuleLogger",
+                "UC"
+            ],
+            "title": "UCComputed"
+        },
+        "Part": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Text": {
+                    "type": "string"
+                },
+                "Code": {
+                    "type": "string"
+                },
+                "LinearizationURI": {
+                    "type": "string"
+                },
+                "FoundationURI": {
+                    "type": "string"
+                },
+                "Interval": {
+                    "type": "string"
+                }
+            },
+            "required": [
+            ],
+            "title": "Part"
+        },
+        "Surgery": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "WasPerformed": {
+                    "type": "integer"
+                },
+                "Reason": {
+                    "type": "string"
+                },
+                "Date": {
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "required": [
+            ],
+            "title": "Surgery"
+        }
+    }
+}
