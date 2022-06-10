@@ -323,7 +323,7 @@ Two examples of certificates for ICD10 and ICD11.
         "UCStated": {
             "Text": "",
             "Code": "5A14/BA41.Z",
-            "LinearizationURI": "http://id.who.int/icd/entity/1697306310 / http://id.who.int/icd/entity/1334938734/mms/unspecified"
+            "LinearizationURI": "http://id.who.int/icd/release/11/mms/1697306310 / http://id.who.int/icd/release/11/mms/1334938734/unspecified"
         },
         "UCComputed": {
             "RuleEngine": "",
@@ -336,7 +336,7 @@ Two examples of certificates for ICD10 and ICD11.
             "UC": {
                 "Code": "5A14",
                 "Text": "DIABETES MELLITUS",
-                "LinearizationURI": "http://id.who.int/icd/entity/1697306310"
+                "LinearizationURI": "http://id.who.int/icd/release/11/mms/1697306310"
             }
         },
         "AdministrativeData": {
@@ -349,19 +349,19 @@ Two examples of certificates for ICD10 and ICD11.
             {
                 "Text": "",
                 "Code": "BA41.Z",
-                "LinearizationURI": "http://id.who.int/icd/entity/1334938734/mms/unspecified",
+                "LinearizationURI": "http://id.who.int/icd/release/11/mms/1334938734/unspecified",
                 "Interval": ""
             },
             {
                 "Text": "",
                 "Code": "5A14",
-                "LinearizationURI": "http://id.who.int/icd/entity/1697306310",
+                "LinearizationURI": "http://id.who.int/icd/release/11/mms/1697306310",
                 "Interval": ""
             },
             {
                 "Text": "",
                 "Code": "BA00.Z",
-                "LinearizationsURI": "http://id.who.int/icd/entity/761947693/mms/unspecified",
+                "LinearizationsURI": "http://id.who.int/icd/release/11/mms/761947693/unspecified",
                 "Interval": ""
             }
         ],
