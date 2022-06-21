@@ -48,6 +48,7 @@ The data type used are:
 | `structure` | _json_ structure with other fields inside |
 | `array[type]` | A list of the specific type, in our format we are using only list of other structures. i.e. array of `[ {"name": "The name"}, {"name": "Other example name name"} ]` |
 | `date` | The date field used in the certificate is using the format defined in the [W3C](https://www.w3.org/TR/NOTE-datetime). The date value need to be insert between quotation marks `"`. |
+| `durations` | Durations define the amount of intervening time in a time interval used in the certificate for the interval field. The format is defined in the [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). The duration value need to be insert between quotation marks `"`.|
 
 Example of date:
 
@@ -75,6 +76,36 @@ where:
      TZD  = time zone designator (Z or +hh:mm or -hh:mm)
 ```
 
+Example of duration:
+
+```
+The duration is represented by the format P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W or P<date>T<time>
+In these representations, the [n] is replaced by the value for each of the date and time elements that follow the [n]. Leading zeros are not required, but the maximum number of digits for each element should be agreed to by the communicating parties. The capital letters P, Y, M, W, D, T, H, M, and S are designators for each of the date and time elements and are not replaced.
+where:
+    P is the duration designator (for period) placed at the start of the duration representation.
+    Y is the year designator that follows the value for the number of calendar years.
+    M is the month designator that follows the value for the number of calendar months.
+    W is the week designator that follows the value for the number of weeks.
+    D is the day designator that follows the value for the number of calendar days.
+    T is the time designator that precedes the time components of the representation.
+    H is the hour designator that follows the value for the number of hours.
+    M is the minute designator that follows the value for the number of minutes.
+    S is the second designator that follows the value for the number of seconds.
+
+For example, "P3Y6M4DT12H30M5S" represents a duration of "three years, six months, four days, twelve hours, thirty minutes, and five seconds".
+To resolve ambiguity, "P1M" is a one-month duration and "PT1M" is a one-minute duration.
+
+Practical examples:
+    "PT10S" is a ten seconds duration
+    "PT10M" is a ten minutes duration
+    "PT10H" is a ten hours duration
+    "P5D" is a five days duration
+    "P2W" is a two weeks duration
+    "P10M" is a ten months duration
+    "P10Y" is a ten years duration
+    "", "P" or "PT" is used for unknown interval.
+```
+
 ### Certificate related
 
 Those fields are used to identify the certificates, those informations are not used for the decision of the UCOD, but some as `CodingVerion` 
@@ -99,7 +130,7 @@ The following fields are a nested structure used to state condition line of the 
 | `Code` | `string` | Classification codes comma separated. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
 | `LinearizationURI` | `string` | Only used for the ICD-11 Linearization URI with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B). For multiple URI’s use comma to separated entities. |
 | `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B). For multiple URI’s use comma to separated entities. |
-| `Interval` | `string` | Time interval from onset to death. |
+| `Interval` | `durations` | Time interval from onset to death. |
 
 ### Certificate related cause of death
 
