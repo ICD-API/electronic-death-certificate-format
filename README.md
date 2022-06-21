@@ -48,7 +48,7 @@ The data type used are:
 | `structure` | _json_ structure with other fields inside |
 | `array[type]` | A list of the specific type, in our format we are using only list of other structures. i.e. array of `[ {"name": "The name"}, {"name": "Other example name name"} ]` |
 | `date` | The date field used in the certificate is using the format defined in the [W3C](https://www.w3.org/TR/NOTE-datetime). The date value need to be insert between quotation marks `"`. |
-| `durations` | Durations define the amount of intervening time in a time interval used in the certificate for the interval field. The format is defined in the [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). The duration value need to be insert between quotation marks `"`.|
+| `duration` | Durations define the amount of intervening time in a time interval used in the certificate for the interval field. The format is defined in the [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601#Durations). The duration value need to be insert between quotation marks `"`.|
 
 Example of date:
 
@@ -130,7 +130,7 @@ The following fields are a nested structure used to state condition line of the 
 | `Code` | `string` | Classification codes comma separated. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
 | `LinearizationURI` | `string` | Only used for the ICD-11 Linearization URI with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B). For multiple URI’s use comma to separated entities. |
 | `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B). For multiple URI’s use comma to separated entities. |
-| `Interval` | `durations` | Time interval from onset to death. |
+| `Interval` | `duration` | Time interval from onset to death. |
 
 ### Certificate related cause of death
 
