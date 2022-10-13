@@ -142,7 +142,7 @@ Following we present the certificate associate data.
 | `AdministrativeData\DateBirth` | _optional_ | `date` | _false_ ||
 | `AdministrativeData\DateDeath` | _optional_ | `date` | _false_ ||
 | `AdministrativeData\Sex` | _required_ | `integer` | _true_ ||
-| `AdministrativeData\EstimatedAge` | _optional_ | `integer` | _false_ | Estimated age if `DateBirth` and `DateDeath` are missing. |
+| `AdministrativeData\EstimatedAge` | _optional_ | `durations` | _false_ | Estimated age if `DateBirth` and `DateDeath` are missing. |
 
 > `Sex` mapping values:  
 > - 0 <- “Male”,  

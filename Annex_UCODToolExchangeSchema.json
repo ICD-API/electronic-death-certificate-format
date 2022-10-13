@@ -86,7 +86,7 @@
                     "type": "integer"
                 },
                 "EstimatedAge": {
-                    "type": "integer"
+                    "type": "string"
                 }
             },
             "required": [
