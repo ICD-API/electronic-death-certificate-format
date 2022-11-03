@@ -14,7 +14,6 @@
     },
     "UCComputed": {
       "RuleEngine": "name",
-      "Coding": "Automatic/Manual",
       "Reject": true,
       "Validate": true,
       "NewCodes": {
