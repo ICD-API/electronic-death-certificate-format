@@ -263,7 +263,6 @@ The `UCComputed` field is used by the system to add the computed results.
 | Attribute | Required | Type | Description |
 | --- | --- | --- | --- |
 | `RuleEngine` | _required_ | `string` | Used to specify the rule engine used to the computation, only in case of automatic systems. |
-| `Coding` | _required_ | `string` | Two values possible “Automatic, Manual”. |
 | `Reject` | _required_ | `boolean` | `false` if the computation was able to select the underlying cause of death, `true` otherwise. The computation can fail for multiple reasons (codes not found in the specific linearization, implausibility of the coding, errors of the system.). The reason can be identified in the file logger or rule logger fields. |
 | `Validate` | _optional_ | `boolean` | `true` if the computation was not rejected and the stated UCOD is the same with the selected UCOD, `false` otherwise. |
 | `NewCodes` | _optional_ | `structure` | Similarly to `Part1` and `Part2` allow the fields: `Text`, `Code`, `LinearizationURI`, `FoundationURI`. Here can be found the new codes added by the system computation for the special instructions (__M1__) when the instruction __Code to__ specify a code not present in the certificate. |
@@ -360,7 +359,6 @@ Two examples of certificates for ICD10 and ICD11.
             "RuleEngine": "",
             "Reject": false,
             "Validate": true,
-            "Coding": "",
             "OutputDescription": "Select potential underlying cause: 5A14\nSelect tentative underlying cause: 5A14\n",
             "LongOutputDescription": "Searching for the starting point SP1-SP5 by evaluating multiple sequences in in Part 1.\n\tLongest sequence: BA41.Z, 5A14\n\tRejected sequences for Diabetes Due To Other Conditions.\n\tSelect potential underlying cause: 5A14\nCheck whether the tentative starting point in the steps SP1-SP5 was selected.\n\tTentaive starting point selected in the Part 1.\n\tSelect tentative underlying cause: 5A14\nCheck for modifications of the starting point, SMoL rules (WIP on Steps M1-M4)\n\tThe tentative underlying cause is the same as the starting point selected in Steps SP1 to SP8. Go to step M4.\n\t",
             "NewCodes": {},
