@@ -185,9 +185,6 @@
                 "RuleEngine": {
                     "type": "string"
                 },
-                "Coding": {
-                    "type": "string"
-                },
                 "Reject": {
                     "type": "boolean"
                 },
@@ -208,11 +205,6 @@
                 }
             },
             "required": [
-                "Coding",
-                "Reject",
-                "RuleEngine",
-                "RuleLogger",
-                "UC"
             ],
             "title": "UCComputed"
         },
