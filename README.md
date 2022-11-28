@@ -145,8 +145,8 @@ Following we present the certificate associate data.
 | `AdministrativeData\EstimatedAge` | _optional_ | `durations` | _false_ | Estimated age if `DateBirth` and `DateDeath` are missing. |
 
 > `Sex` mapping values:  
-> - 0 <- “Male”,  
-> - 1 <- “Female”,  
+> - 1 <- “Male”,  
+> - 2 <- “Female”,  
 > - 9 <- ”Unknown”.
 
 | Attribute | Required | Type | Used by SMoL computation | Description |
