@@ -27,12 +27,6 @@
                 "ICDMinorVersion": {
                     "type": "string"
                 },
-                "UCStated": {
-                    "$ref": "#/definitions/Part"
-                },
-                "UCComputed": {
-                    "$ref": "#/definitions/UCComputed"
-                },
                 "AdministrativeData": {
                     "$ref": "#/definitions/AdministrativeData"
                 },
@@ -61,13 +55,7 @@
                     "$ref": "#/definitions/MaternalDeath"
                 }
             },
-            "required": [
-                "AdministrativeData",
-                "CertificateKey",
-                "ICDVersion",
-                "ICDMinorVersion",
-                "Part1"
-            ],
+
             "title": "Certificate"
         },
         "AdministrativeData": {
@@ -177,44 +165,6 @@
             "required": [
             ],
             "title": "MaternalDeath"
-        },
-        "UCComputed": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "RuleEngine": {
-                    "type": "string"
-                },
-                "Coding": {
-                    "type": "string"
-                },
-                "Reject": {
-                    "type": "boolean"
-                },
-                "Validate": {
-                    "type": "boolean"
-                },
-                "RuleLogger": {
-                  "type": "string"
-                },
-                "FileLogger": {
-                    "type": "string"
-                },
-                "NewCodes": {
-                    "$ref": "#/definitions/Part"
-                    },
-                "UC": {
-                    "$ref": "#/definitions/Part"
-                }
-            },
-            "required": [
-                "Coding",
-                "Reject",
-                "RuleEngine",
-                "RuleLogger",
-                "UC"
-            ],
-            "title": "UCComputed"
         },
         "Part": {
             "type": "object",

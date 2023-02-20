@@ -5,33 +5,8 @@
     "Comments": "text",
     "FreeText": "text",
     "ICDVersion": "text",
-    "ICDMinorVersion": "text",
-    "UCStated": {
-      "Text": "text",
-      "Code": "text",
-      "LinearizationURI": "text",
-      "FoundationURI": "text"
-    },
-    "UCComputed": {
-      "RuleEngine": "name",
-      "Coding": "Automatic/Manual",
-      "Reject": true,
-      "Validate": true,
-      "NewCodes": {
-        "Text": "text",
-        "Code": "text",
-        "LinearizationURI": "text",
-        "FoundationURI": "text"
-      },
-      "RuleLogger": "text",
-      "FileLogger": "text",
-      "UC": {
-        "Text": "text",
-        "Code": "text",
-        "LinearizationURI": "text",
-        "FoundationURI": "text"
-      }
-    },
+    "ICDMinorVersion": "text"
+    ,
     "AdministrativeData": {
       "DateBirth": "1997-07-16",
       "DateDeath": "1997-07-16",
