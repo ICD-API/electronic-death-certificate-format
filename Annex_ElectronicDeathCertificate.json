@@ -11,7 +11,7 @@
       "DateBirth": "1997-07-16",
       "DateDeath": "1997-07-16",
       "Sex": 1,
-      "EstimatedAge": 4
+      "EstimatedAge": "P50Y"
     },
     "Part1": [
       {
@@ -19,15 +19,14 @@
         "Code": "text",
         "LinearizationURI": "text",
         "FoundationURI": "text",
-        "Interval": "text"
+        "Interval": "P10Y"
       }
     ],
     "Part2": {
       "Text": "text",
       "Code": "text",
       "LinearizationURI": "text",
-      "FoundationURI": "text",
-      "Interval": "text"
+      "FoundationURI": "text"
     },
     "Surgery": {
       "WasPerformed": 0,
