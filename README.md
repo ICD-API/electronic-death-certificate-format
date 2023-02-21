@@ -22,14 +22,7 @@ we have the mapping:
 > - _unknown_ -> 9. 
 
 We are using `\` to identify nested structures.
-> For example `Part2` has nested `Text` which we identify as `Part2\Text`
-``` json
-"Part2": {
-    "Text": "text",
-    "Code": "text",
-    "LinearizationURI": "text",
-    "FoundationURI": "text"
-}
+```
 ```
 
 ### Data types
@@ -109,39 +102,50 @@ Practical examples:
 | --- | --- | --- | --- |
 | `CertificateKey` |  `string` | Can be used to identify the certificate. |
 | `Issuer` |  `string` | Can be used to identify the issuer. |
-| `Comments` |  `string` | Field that can be filled with free text related to the certificate data or about the computation result. |
-| `FreeText` | `string` | Additional field that can be filled with free text related to the certificate data or about the computation result. |
 | `ICDVersion`  | `string` | If the certificate contains coded data, this field specifies the ICD version used for the coding of the certificate. e.g.`ICD10` or `ICD11`|
 | `ICDMinorVersion`  | `string` | If the certificate contains coded data, this field specifies the ICD minor version used for the coding of the certificate associated to the ICD version.|
 | `AdministrativeData` |  `structure` |  Administrative data structure with nested fields below. |
 | `AdministrativeData\DateBirth` | `date` ||
 | `AdministrativeData\DateDeath` | `date` ||
 | `AdministrativeData\Sex` | `integer` | |
-| `AdministrativeData\EstimatedAge` | `integer` |  Estimated age if `DateBirth` and `DateDeath` are missing. ??? |
+| `AdministrativeData\EstimatedAge` | `duration` |  Estimated age if `DateBirth` and `DateDeath` are missing. |
 
 > `Sex` mapping values:  
-> - 0 <- “Male”,  
-> - 1 <- “Female”,  
+> - 1 <- “Male”,  
+> - 2 <- “Female”,  
 > - 9 <- ”Unknown”.
 
 | Attribute |  Type | Description |
 | --- | :- | --- | :- | --- |
-| `Part1` | `array[structure]` |  List of _cause of death_ structure. See below for the details of the cause of death structure |
-| `Part2` | `structure`  | _Cause of death_ structure. Each element can be seen as a condition line of the causality in the certificate. Nested fields allowed were presented before `Text`, `Code`, `LinearizationURI`, `FoundationURI` and `Interval`. |
+| `Part1` | `[part1 line structure]` |  List _part 1 line structure_ for each line in Part 1 |
+| `Part2` | `[part2 structure]`  | List of _part 2 structure_ i.e. One for each condition listed in Part2 |
 
 
-#### Cause of death structure
->> Nested structure used in Part1 and Part2
+#### Condition structure
+>> | Attribute | Type | Description |
+| --- | --- | --- |
+| `Text` | `string` | Textual description or condition choosen by the physician. |
+| `Code` | `string` | Classification code. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
+| `LinearizationURI` | `string` | Only used for the ICD-11. Linearization URI can contain post coordination (Stem URI A & Ext URI 1 / Stem URI B). |
+| `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B).  |
+||| _The fields above (Code and URIs) are to be used if the certificate contains coded information. In the case for a coded certificate one of the three is sufficient but a certificate could have several filled_ |
 
+
+
+#### Part1 Line structure
 
 
 >> | Attribute | Type | Description |
 | --- | --- | --- |
-| `Text` | `string` | Textual description or condition choosen by the physician. |
-| `Code` | `string` | Classification codes comma separated. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
-| `LinearizationURI` | `string` | Only used for the ICD-11. Linearization URI can contain post coordination (Stem URI A & Ext URI 1 / Stem URI B). For multiple URI’s use comma to separated entities. |
-| `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B). For multiple URI’s use comma to separated entities. |
-||| _The fields above (Code and URIs) are to be used if the certificate contains coded information. In the case for a coded certificate one of the three is sufficient but a certificate could have several filled_ |
+| `Conditions` | `[condition structure]` | array of conditions in a single line in Part1 |
+| `Interval` | `duration` | Time interval from onset to death. |
+
+#### Part 2 structure
+
+
+>> | Attribute | Type | Description |
+| --- | --- | --- |
+| `Condition` | `condition structure` | a single condition listed in Part 2  |
 | `Interval` | `duration` | Time interval from onset to death. |
 
 
@@ -161,18 +165,18 @@ Practical examples:
 The following fields are a nested structure used to state condition line of the certificate. They are used by fields as `Part1` and `Part2` 
 
 
-| Attribute | Required | Type | Used by SMoL computation | Description |
+| Attribute |  Type |  Description |
 | --- | :-: | --- | :-: | --- |
-| `Autopsy` | _optional_ | `structure` | _false_ | If autopsy was requested, fill the nested fields.  |
-| `Autopsy\WasRequested` | _optional_ | `integer` | _false_ | “Was an autopsy requested?”. |
-| `Autopsy\Findings` | _optional_ | `integer` | _false_ | “If yes were the findings used in the certification?”. |
+| `Autopsy` |  `structure` |  If autopsy was requested, fill the nested fields.  |
+| `Autopsy\WasRequested` |  `integer` |  “Was an autopsy requested?”. |
+| `Autopsy\Findings` |  `integer` |  “If yes were the findings used in the certification?”. |
 
-> `Surgery\WasRequested` mapping values:  
+> `Autopsy\WasRequested` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
 
-> `Surgery\Findings` mapping values:  
+> `Autopsy\Findings` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
