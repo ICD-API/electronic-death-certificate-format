@@ -99,7 +99,7 @@ Practical examples:
 
 
 | Attribute |  Type | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- | 
 | `CertificateKey` |  `string` | Can be used to identify the certificate. |
 | `Issuer` |  `string` | Can be used to identify the issuer. |
 | `ICDVersion`  | `string` | If the certificate contains coded data, this field specifies the ICD version used for the coding of the certificate. e.g.`ICD10` or `ICD11`|
@@ -116,14 +116,15 @@ Practical examples:
 > - 9 <- ”Unknown”.
 
 | Attribute |  Type | Description |
-| --- | :- | --- | :- | --- |
+| :- | :- | --- | 
 | `Part1` | `[part1 line structure]` |  List _part 1 line structure_ for each line in Part 1 |
 | `Part2` | `[part2 structure]`  | List of _part 2 structure_ i.e. One for each condition listed in Part2 |
 
 
 #### Condition structure
->> | Attribute | Type | Description |
-| --- | --- | --- |
+
+| Attribute | Type | Description |
+| :- | :- | --- |
 | `Text` | `string` | Textual description or condition choosen by the physician. |
 | `Code` | `string` | Classification code. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
 | `LinearizationURI` | `string` | Only used for the ICD-11. Linearization URI can contain post coordination (Stem URI A & Ext URI 1 / Stem URI B). |
@@ -135,7 +136,7 @@ Practical examples:
 #### Part1 Line structure
 
 
->> | Attribute | Type | Description |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | `Conditions` | `[condition structure]` | array of conditions in a single line in Part1 |
 | `Interval` | `duration` | Time interval from onset to death. |
@@ -143,14 +144,14 @@ Practical examples:
 #### Part 2 structure
 
 
->> | Attribute | Type | Description |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | `Condition` | `condition structure` | a single condition listed in Part 2  |
 | `Interval` | `duration` | Time interval from onset to death. |
 
 
 | Attribute |  Type | Description |
-| --- | :- | --- | :- | --- |
+| --- | :- | --- | 
 | `Surgery` | `structure`  | Used when surgery was performed. Fill the nested fields. |
 | `Surgery\WasPerformed` | `integer` | “Was surgery performed within the last 4 weeks?” |
 | `Surgery\Date` |  `boolean`  | Is surgery was performed specify date. |
@@ -166,7 +167,7 @@ The following fields are a nested structure used to state condition line of the 
 
 
 | Attribute |  Type |  Description |
-| --- | :-: | --- | :-: | --- |
+| --- | :-: | --- |
 | `Autopsy` |  `structure` |  If autopsy was requested, fill the nested fields.  |
 | `Autopsy\WasRequested` |  `integer` |  “Was an autopsy requested?”. |
 | `Autopsy\Findings` |  `integer` |  “If yes were the findings used in the certification?”. |
@@ -182,7 +183,7 @@ The following fields are a nested structure used to state condition line of the 
 > - 9 <- ”Unknown”.
 
 | Attribute | Type |  Description |
-| --- | :-: | --- | :-: | --- |
+| --- | :-: | --- | 
 | `MannerOfDeath` | `structure` |  Fill the nested fields. |
 | `MannerOfDeath\MannerOfDeath` | `integer` |   |
 | `MannerOfDeath\DateOfExternalCauseOrPoisoning`  | `date` |   |
@@ -215,7 +216,7 @@ The following fields are a nested structure used to state condition line of the 
 > - 99 <- “Unknown”.
 
 | Attribute |  Type |  Description |
-| --- | :-: | --- | :-: | --- |
+| --- | :-: | --- | 
 | `FetalOrInfantDeath` |  `structure` |   |
 | `FetalOrInfantDeath\MultiplePregnancy` |  `integer` |   |
 | `FetalOrInfantDeath\Stillborn` |  `integer` |   |
@@ -236,7 +237,7 @@ The following fields are a nested structure used to state condition line of the 
 > - 9 <- ”Unknown”.
 
 | Attribute |  Type |  Description |
-| --- | :-: | --- | :-: | --- |
+| --- | :-: | --- | 
 | `MaternalDeath` | `integer` |   |
 | `MaternalDeath\WasPregnant` |  `integer` |   |
 | `MaternalDeath\TimeFromPregnancy` |  `integer` |   |
