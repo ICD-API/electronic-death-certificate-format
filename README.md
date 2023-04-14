@@ -117,11 +117,11 @@ Practical examples:
 
 | Attribute |  Type | Description |
 | :- | :- | --- | 
-| `Part1` | `[part1 line structure]` |  List _part 1 line structure_ for each line in Part 1 |
-| `Part2` | `[part2 structure]`  | List of _part 2 structure_ i.e. One for each condition listed in Part2 |
+| `Part1` | `[line structure]` |  List of  _line structure_ for each line in Part 1 |
+| `Part2` | `line structure`  | _line structure_ having all conditions in Part2  |
 
 
-#### Condition structure
+#### Single Condition structure
 
 | Attribute | Type | Description |
 | :- | :- | --- |
@@ -129,25 +129,16 @@ Practical examples:
 | `Code` | `string` | Classification code. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
 | `LinearizationURI` | `string` | Only used for the ICD-11. Linearization URI can contain post coordination (Stem URI A & Ext URI 1 / Stem URI B). |
 | `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B).  |
+| `Interval` | `duration` | Time interval from onset to death. |
 ||| _The fields above (Code and URIs) are to be used if the certificate contains coded information. In the case for a coded certificate one of the three is sufficient but a certificate could have several filled_ |
 
 
 
-#### Part1 Line structure
-
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `Conditions` | `[condition structure]` | array of conditions in a single line in Part1 |
-| `Interval` | `duration` | Time interval from onset to death. |
-
-#### Part 2 structure
-
+#### Line structure
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `Condition` | `condition structure` | a single condition listed in Part 2  |
-| `Interval` | `duration` | Time interval from onset to death. |
+| `Conditions` | `[Single condition structure]` | array of conditions in a single line in Part1 |
 
 
 | Attribute |  Type | Description |
