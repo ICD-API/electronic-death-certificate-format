@@ -243,6 +243,7 @@ The following fields are a nested structure used to state condition line of the 
 > - 0 <- “At time of death”,
 > - 1 <- “Within 42 days before the death”,
 > - 2 <- “Between 43 days up to 1 year before death”,
+> - 3 <- "One year or more before death",
 > - 9 <- “Unknown”.
 
 > `MaternalDeath\PregnancyContribute` mapping values:  
