@@ -145,7 +145,7 @@ Practical examples:
 | --- | :- | --- | 
 | `Surgery` | `structure`  | Used when surgery was performed. Fill the nested fields. |
 | `Surgery\WasPerformed` | `integer` | “Was surgery performed within the last 4 weeks?” |
-| `Surgery\Date` |  `boolean`  | Is surgery was performed specify date. |
+| `Surgery\Date` |  `date`  | Is surgery was performed specify date. |
 | `Surgery\Reason` | `string`  | If _yes_, specify reason for surgery (disease or condition). |
 
 > `Surgery\WasPerformed` mapping values:  
@@ -229,7 +229,7 @@ The following fields are a nested structure used to state condition line of the 
 
 | Attribute |  Type |  Description |
 | --- | :-: | --- | 
-| `MaternalDeath` | `integer` |   |
+| `MaternalDeath` | `structure` |   |
 | `MaternalDeath\WasPregnant` |  `integer` |   |
 | `MaternalDeath\TimeFromPregnancy` |  `integer` |   |
 | `MaternalDeath\PregnancyContribute` |  `integer` |   |
@@ -260,8 +260,130 @@ While we have seen the format of the death certificate, the file with certificat
 Two examples of certificates for ICD10 and ICD11.
 
 #### ICD-10 example
-example to be added
+[
+    {
+        "CertificateKey": "0",
+        "Issuer": "",
+        "ICDVersion": "ICD10",
+        "ICDMinorVersion": "2019",
+        "AdministrativeData": {
+                "Sex": 1,
+                "DateDeath": "2020-01-01",
+                "DateBirth": "2000-01-01"
+            },
+        "Part1": [
+            {
+                "Conditions": [
+                {
+                    "Text": "Other specified general symptoms and signs",
+                    "Code": "R68.8",
+                    "Interval": "P10Y"
+                }
+                ]
+            },
+            {
+                "Conditions": [
+                {
+                    "Text": "Sepsis, unspecified",
+                    "Code": "A41.9",
+                    "Interval": "P10Y"
+                }
+                ]
+            },
+            {
+                "Conditions": [
+                    {
+                        "Text": "Other and unspecified abdominal pain",
+                        "Code": "R10.4",
+                        "Interval": "P10Y"
+                    }
+                ]
+            }
+        ],
+        "Part2": {
+            "Conditions": []
+        },
+        "Surgery": {
+            "WasPerformed": 1,
+            "Date": "2019-05-25",
+            "Reason": "Textual reason"
+        },
+        "MannerOfDeath": {
+            "MannerOfDeath": 1,
+            "DateOfExternalCauseOrPoisoning": "2019-06-27",
+            "DescriptionExternalCause": "Textual description",
+            "PlaceOfOccuranceExternalCause": 3
+        },
+        "MaternalDeath": {
+            "WasPregnant": 9,
+            "TimeFromPregnancy": 9,
+            "PregnancyContribute": 9
+        }
+    }
+]
 
 #### ICD-11 example
 
-example to be added
+[
+    {
+        "CertificateKey": "13",
+        "Issuer": "",
+        "ICDVersion": "ICD11",
+        "ICDMinorVersion": "2023",
+        "AdministrativeData": {
+            "Sex": 1,
+            "EstimatedAge": "P20Y"
+        },
+        "Part1": [
+        {
+            "Conditions": [
+                {
+                    "Text": "Acute myocardial infarction, unspecified",
+                    "Code": "BA41.Z",
+                    "LinearizationURI": "http://id.who.int/icd/release/11/mms/1334938734/unspecified",
+                    "Interval": "P10Y"
+                }
+            ]
+        },
+        {
+            "Conditions": [
+                {
+                    "Text": "Diabetes mellitus, type unspecified",
+                    "Code": "5A14",
+                    "LinearizationURI": "http://id.who.int/icd/release/11/mms/1697306310",
+                    "Interval": "P10Y"
+                }
+            ]
+        },
+        {
+            "Conditions": [
+                {
+                    "Text": "Essential hypertension, unspecified",
+                    "Code": "BA00.Z",
+                    "LinearizationURI": "http://id.who.int/icd/release/11/mms/761947693/unspecified",
+                    "Interval": "P10Y"
+                }
+            ]
+        }
+        ],
+        "Part2": {
+            "Conditions": []
+        },
+        "Surgery": {
+            "WasPerformed": 1,
+            "Date": "2019-05-25",
+            "Reason": "Textual reason"
+        },
+        "MannerOfDeath": {
+            "MannerOfDeath": 1,
+            "DateOfExternalCauseOrPoisoning": "2019-06-27",
+            "DescriptionExternalCause": "Textual description",
+            "PlaceOfOccuranceExternalCause": 3
+        },
+        "MaternalDeath": {
+            "WasPregnant": 9,
+            "TimeFromPregnancy": 9,
+            "PregnancyContribute": 9
+        }
+    }
+]

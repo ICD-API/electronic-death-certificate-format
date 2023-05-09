@@ -2,8 +2,6 @@
   {
     "CertificateKey": "text",
     "Issuer": "text",
-    "Comments": "text",
-    "FreeText": "text",
     "ICDVersion": "text",
     "ICDMinorVersion": "text"
     ,
@@ -15,23 +13,32 @@
     },
     "Part1": [
       {
-        "Text": "text",
-        "Code": "text",
-        "LinearizationURI": "text",
-        "FoundationURI": "text",
-        "Interval": "P10Y"
+        "Conditions": [
+          {
+            "Text": "text",
+            "Code": "text",
+            "LinearizationURI": "text",
+            "FoundationURI": "text",
+            "Interval": "P10Y"
+          }
+        ]
       }
     ],
     "Part2": {
-      "Text": "text",
-      "Code": "text",
-      "LinearizationURI": "text",
-      "FoundationURI": "text"
+      "Conditions": [
+        {
+          "Text": "text",
+          "Code": "text",
+          "LinearizationURI": "text",
+          "FoundationURI": "text",
+          "Interval": "P10Y"
+        }
+      ]
     },
     "Surgery": {
       "WasPerformed": 0,
-      "Reason": "text",
-      "Date": "1997-07-16"
+      "Date": "1997-07-16",
+      "Reason": "text"
     },
     "Autopsy": {
       "WasRequested": 0,
