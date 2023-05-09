@@ -15,12 +15,6 @@
                 "Issuer": {
                     "type": "string"
                 },
-                "Comments": {
-                    "type": "string"
-                },
-                "FreeText": {
-                    "type": "string"
-                },
                 "ICDVersion": {
                     "type": "string"
                 },
@@ -33,11 +27,11 @@
                 "Part1": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Part"
+                        "$ref": "#/definitions/LineStructure"
                     }
                 },
                 "Part2": {
-                    "$ref": "#/definitions/Part"
+                    "$ref": "#/definitions/LineStructure"
                 },
                 "Surgery": {
                     "$ref": "#/definitions/Surgery"
@@ -81,6 +75,64 @@
             ],
             "title": "AdministrativeData"
         },
+        "LineStructure": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Conditions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Condition"
+                    }
+                }
+            },
+            "required": [
+            ],
+            "title": "LineStructure"
+        },
+        "Condition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Text": {
+                    "type": "string"
+                },
+                "Code": {
+                    "type": "string"
+                },
+                "LinearizationURI": {
+                    "type": "string"
+                },
+                "FoundationURI": {
+                    "type": "string"
+                },
+                "Interval": {
+                    "type": "string"
+                }
+            },
+            "required": [
+            ],
+            "title": "Condition"
+        },
+        "Surgery": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "WasPerformed": {
+                    "type": "integer"
+                },
+                "Reason": {
+                    "type": "string"
+                },
+                "Date": {
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "required": [
+            ],
+            "title": "Surgery"
+        },
         "Autopsy": {
             "type": "object",
             "additionalProperties": false,
@@ -95,6 +147,28 @@
             "required": [
             ],
             "title": "Autopsy"
+        },
+        "MannerOfDeath": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "MannerOfDeath": {
+                    "type": "integer"
+                },
+                "DateOfExternalCauseOrPoisoning": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "DescriptionExternalCause": {
+                    "type": "string"
+                },
+                "PlaceOfOccuranceExternalCause": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+            ],
+            "title": "MannerOfDeath"
         },
         "FetalOrInfantDeath": {
             "type": "object",
@@ -126,28 +200,6 @@
             ],
             "title": "FetalOrInfantDeath"
         },
-        "MannerOfDeath": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "MannerOfDeath": {
-                    "type": "integer"
-                },
-                "DateOfExternalCauseOrPoisoning": {
-                    "type": "string",
-                    "format": "date"
-                },
-                "DescriptionExternalCause": {
-                    "type": "string"
-                },
-                "PlaceOfOccuranceExternalCause": {
-                    "type": "integer"
-                }
-            },
-            "required": [
-            ],
-            "title": "MannerOfDeath"
-        },
         "MaternalDeath": {
             "type": "object",
             "additionalProperties": false,
@@ -165,49 +217,6 @@
             "required": [
             ],
             "title": "MaternalDeath"
-        },
-        "Part": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "Text": {
-                    "type": "string"
-                },
-                "Code": {
-                    "type": "string"
-                },
-                "LinearizationURI": {
-                    "type": "string"
-                },
-                "FoundationURI": {
-                    "type": "string"
-                },
-                "Interval": {
-                    "type": "string"
-                }
-            },
-            "required": [
-            ],
-            "title": "Part"
-        },
-        "Surgery": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "WasPerformed": {
-                    "type": "integer"
-                },
-                "Reason": {
-                    "type": "string"
-                },
-                "Date": {
-                    "type": "string",
-                    "format": "date"
-                }
-            },
-            "required": [
-            ],
-            "title": "Surgery"
         }
     }
 }
