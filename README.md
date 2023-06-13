@@ -13,7 +13,8 @@ The **death certificate** is defined as a *JSON* format.
 
 In this document each field of the certificate is listed together with its description data type and allowed values. For some fields which can contain only specific 
 values we are specifying the mapping, where in the certificate the numeric need to be used. 
-> i.e. when the possible values can be “yes”, “no” and “unknown” 
+
+i.e. when the possible values can be “yes”, “no” and “unknown” 
 we have the mapping:
 > - _no_ -> 0, 
 > - _yes_ -> 1, 
