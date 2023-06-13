@@ -8,8 +8,6 @@ The **death certificate** is defined as a *JSON* format.
 
 [The json schema for a single death certificate can be found here](Annex_ElectronicDeathCertificateSchema.json) 
 
-And a sample file that illustrates the structure of a file that contains an array of certificates is available [here](Annex_ElectronicDeathCertificateSchema.json).
-
 
 ## Overview
 
