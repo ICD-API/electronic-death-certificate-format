@@ -163,12 +163,12 @@ The following fields are a nested structure used to state condition line of the 
 | `Autopsy\WasRequested` |  `integer` |  “Was an autopsy requested?”. |
 | `Autopsy\Findings` |  `integer` |  “If yes were the findings used in the certification?”. |
 
-> `Autopsy\WasRequested` mapping values:  
+ `Autopsy\WasRequested` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
 
-> `Autopsy\Findings` mapping values:  
+ `Autopsy\Findings` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
@@ -181,7 +181,7 @@ The following fields are a nested structure used to state condition line of the 
 | `MannerOfDeath\DescriptionExternalCause` |  `string` |  |
 | `MannerOfDeath\PlaceOfOccuranceExternalCause`  | `integer` |  |
 
-> `MannerOfDeath\MannerOfDeath` mapping values:  
+ `MannerOfDeath\MannerOfDeath` mapping values:  
 > - 0 <- “Disease”,
 > - 1 <- “Assault”,
 > - 2 <- “Could not be determined”,
@@ -192,7 +192,7 @@ The following fields are a nested structure used to state condition line of the 
 > - 6 <- “War”,
 > - 9 <- “Unknown”.
 
-> `MannerOfDeath\PlaceOfOccuranceExternalCause` mapping values:  
+ `MannerOfDeath\PlaceOfOccuranceExternalCause` mapping values:  
 > - 0 <- “At home”,
 > - 1 <- “Residential institution”,
 > - 2 <- “School”,
@@ -217,12 +217,12 @@ The following fields are a nested structure used to state condition line of the 
 | `FetalOrInfantDeath\AgeMother` |  `integer` |   |
 | `FetalOrInfantDeath\PerinatalDescription` |  `string` |   |
 
-> `FetalOrInfantDeath\MultiplePregnancy` mapping values:  
+ `FetalOrInfantDeath\MultiplePregnancy` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
 
-> `FetalOrInfantDeath\Stillborn` mapping values:  
+ `FetalOrInfantDeath\Stillborn` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
@@ -234,19 +234,19 @@ The following fields are a nested structure used to state condition line of the 
 | `MaternalDeath\TimeFromPregnancy` |  `integer` |   |
 | `MaternalDeath\PregnancyContribute` |  `integer` |   |
 
-> `MaternalDeath\WasPregnant` mapping values:  
+ `MaternalDeath\WasPregnant` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
 
-> `MaternalDeath\TimeFromPregnancy` mapping values:  
+ `MaternalDeath\TimeFromPregnancy` mapping values:  
 > - 0 <- “At time of death”,
 > - 1 <- “Within 42 days before the death”,
 > - 2 <- “Between 43 days up to 1 year before death”,
 > - 3 <- "One year or more before death",
 > - 9 <- “Unknown”.
 
-> `MaternalDeath\PregnancyContribute` mapping values:  
+ `MaternalDeath\PregnancyContribute` mapping values:  
 > - 0 <- “No”,  
 > - 1 <- “Yes”,  
 > - 9 <- ”Unknown”.
