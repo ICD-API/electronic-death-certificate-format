@@ -260,6 +260,7 @@ While we have seen the format of the death certificate, the file with certificat
 Two examples of certificates for ICD10 and ICD11.
 
 #### ICD-10 example
+```
 [
     {
         "CertificateKey": "0",
@@ -321,9 +322,9 @@ Two examples of certificates for ICD10 and ICD11.
         }
     }
 ]
-
+```
 #### ICD-11 example
-
+```
 [
     {
         "CertificateKey": "13",
@@ -387,3 +388,4 @@ Two examples of certificates for ICD10 and ICD11.
         }
     }
 ]
+```
