@@ -110,9 +110,9 @@ Practical examples:
 | `AdministrativeData\EstimatedAge` | `duration` |  Estimated age if `DateBirth` and `DateDeath` are missing. |
 
 > `Sex` mapping values:  
-> - 1 <- “Male”,  
-> - 2 <- “Female”,  
-> - 9 <- ”Unknown”.
+> - 1 <- Male
+> - 2 <- Female
+> - 9 <- Unknown
 
 | Attribute |  Type | Description |
 | :- | :- | --- | 
@@ -148,9 +148,9 @@ Practical examples:
 | `Surgery\Reason` | `string`  | If _yes_, specify reason for surgery (disease or condition). |
 
 > `Surgery\WasPerformed` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No  
+> - 1 <- Yes 
+> - 9 <- Unknown
 
 
 The following fields are a nested structure used to state condition line of the certificate. They are used by fields as `Part1` and `Part2` 
@@ -163,14 +163,14 @@ The following fields are a nested structure used to state condition line of the 
 | `Autopsy\Findings` |  `integer` |  “If yes were the findings used in the certification?”. |
 
  `Autopsy\WasRequested` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No
+> - 1 <- Yes
+> - 9 <- Unknown
 
  `Autopsy\Findings` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No
+> - 1 <- Yes
+> - 9 <- Unknown
 
 | Attribute | Type |  Description |
 | --- | :-: | --- | 
@@ -181,29 +181,29 @@ The following fields are a nested structure used to state condition line of the 
 | `MannerOfDeath\PlaceOfOccuranceExternalCause`  | `integer` |  |
 
  `MannerOfDeath\MannerOfDeath` mapping values:  
-> - 0 <- “Disease”,
-> - 1 <- “Accident”,
-> - 2 <- “Intentional self harm”,
-> - 3 <- “Assault”,
-> - 4 <- “Legal intervention”,
-> - 5 <- “War”, 
-> - 6 <- “Could not be determined”,
-> - 7 <- “Pending investigation”,
-> - 9 <- “Unknown”.
+> - 0 <- Disease
+> - 1 <- Accident
+> - 2 <- Intentional self harm
+> - 3 <- Assault
+> - 4 <- Legal intervention
+> - 5 <- War
+> - 6 <- Could not be determined
+> - 7 <- Pending investigation
+> - 9 <- Unknown
 
  `MannerOfDeath\PlaceOfOccuranceExternalCause` mapping values:  
-> - 0 <- “At home”,
-> - 1 <- “Residential institution”,
-> - 2 <- “School”,
-> - 3 <- “other institution”,
-> - 4 <- “public administrative area”,
-> - 5 <- “Sports and athletics area”,
-> - 6 <- “Street and highway”,
-> - 7 <- “Trade and service area”,
-> - 8 <- “Industrial and construction area”,
-> - 9 <- “Farm”,
-> - 10 <- “Other place”,
-> - 99 <- “Unknown”.
+> - 0 <- At home
+> - 1 <- Residential institution
+> - 2 <- School
+> - 3 <- other institution
+> - 4 <- public administrative area
+> - 5 <- Sports and athletics area
+> - 6 <- Street and highway
+> - 7 <- Trade and service area
+> - 8 <- Industrial and construction area
+> - 9 <- Farm
+> - 10 <- Other place
+> - 99 <- Unknown
 
 | Attribute |  Type |  Description |
 | --- | :-: | --- | 
@@ -217,14 +217,14 @@ The following fields are a nested structure used to state condition line of the 
 | `FetalOrInfantDeath\PerinatalDescription` |  `string` |   |
 
  `FetalOrInfantDeath\MultiplePregnancy` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No
+> - 1 <- Yes
+> - 9 <- Unknown
 
  `FetalOrInfantDeath\Stillborn` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No
+> - 1 <- Yes
+> - 9 <- Unknown
 
 | Attribute |  Type |  Description |
 | --- | :-: | --- | 
@@ -234,21 +234,21 @@ The following fields are a nested structure used to state condition line of the 
 | `MaternalDeath\PregnancyContribute` |  `integer` |   |
 
  `MaternalDeath\WasPregnant` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No
+> - 1 <- Yes
+> - 9 <- Unknown
 
  `MaternalDeath\TimeFromPregnancy` mapping values:  
-> - 0 <- “At time of death”,
-> - 1 <- “Within 42 days before the death”,
-> - 2 <- “Between 43 days up to 1 year before death”,
-> - 3 <- "One year or more before death",
-> - 9 <- “Unknown”.
+> - 0 <- At time of death
+> - 1 <- Within 42 days before the death
+> - 2 <- Between 43 days up to 1 year before death
+> - 3 <- One year or more before death
+> - 9 <- Unknown
 
  `MaternalDeath\PregnancyContribute` mapping values:  
-> - 0 <- “No”,  
-> - 1 <- “Yes”,  
-> - 9 <- ”Unknown”.
+> - 0 <- No
+> - 1 <- Yes
+> - 9 <- Unknown
 
 
 ## Array of certificates
