@@ -124,7 +124,7 @@ Practical examples:
 
 | Attribute | Type | Description |
 | :- | :- | --- |
-| `Text` | `string` | Textual description or condition choosen by the physician. |
+| `Text` | `string` | Textual description or condition chosen by certifier. |
 | `Code` | `string` | Classification code. (For ICD 11 its allowed to use post coordination, i.e. “Stem A & Ext 1 / Stem B”.) |
 | `LinearizationURI` | `string` | Only used for the ICD-11. Linearization URI can contain post coordination (Stem URI A & Ext URI 1 / Stem URI B). |
 | `FoundationURI` | `string` | Only used for the ICD-11 Foundation URI when the Linearization URI are not sufficient to archive the level of detail needed and with possible post coordination (Stem URI A & Ext URI 1 / Stem URI B).  |
