@@ -185,10 +185,10 @@ The following fields are a nested structure used to state condition line of the 
 > - 1 <- “Assault”,
 > - 2 <- “Could not be determined”,
 > - 3 <- “Accident”,
-> - 3 <- “Legal intervention”,
-> - 4 <- “Pending investigation”,
-> - 5 <- “Intentional self harm”,
-> - 6 <- “War”,
+> - 4 <- “Legal intervention”,
+> - 5 <- “Pending investigation”,
+> - 6 <- “Intentional self harm”,
+> - 7 <- “War”,
 > - 9 <- “Unknown”.
 
  `MannerOfDeath\PlaceOfOccuranceExternalCause` mapping values:  
