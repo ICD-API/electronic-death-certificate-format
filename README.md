@@ -194,16 +194,14 @@ The following fields are a nested structure used to state condition line of the 
  `MannerOfDeath\PlaceOfOccuranceExternalCause` mapping values:  
 > - 0 <- At home
 > - 1 <- Residential institution
-> - 2 <- School
-> - 3 <- other institution
-> - 4 <- public administrative area
-> - 5 <- Sports and athletics area
-> - 6 <- Street and highway
-> - 7 <- Trade and service area
-> - 8 <- Industrial and construction area
-> - 9 <- Farm
-> - 10 <- Other place
-> - 99 <- Unknown
+> - 2 <- School, other institution, public administration area
+> - 3 <- Sports and athletics area
+> - 4 <- Street and highway
+> - 5 <- Trade and service area
+> - 6 <- Industrial and construction area
+> - 7 <- Farm
+> - 8 <- Other place
+> - 9 <- Unknown
 
 | Attribute |  Type |  Description |
 | --- | :-: | --- | 
