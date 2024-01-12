@@ -209,7 +209,7 @@ The following fields are a nested structure used to state condition line of the 
 | `FetalOrInfantDeath\MultiplePregnancy` |  `integer` |   |
 | `FetalOrInfantDeath\Stillborn` |  `integer` |   |
 | `FetalOrInfantDeath\DeathWithin24h` |  `integer` |   |
-| `FetalOrInfantDeath\BirthHeight` |  `integer` |   |
+| `FetalOrInfantDeath\BirthWeight` |  `integer` |   |
 | `FetalOrInfantDeath\PregnancyWeeks` |  `integer` |   |
 | `FetalOrInfantDeath\AgeMother` |  `integer` |   |
 | `FetalOrInfantDeath\PerinatalDescription` |  `string` |   |
